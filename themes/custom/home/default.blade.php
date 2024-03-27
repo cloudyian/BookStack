@@ -13,10 +13,6 @@
         </div>
     </div>
 
-    <div class="container py-xl">
-    <h3>welcome</h3>
-    </div>
-
     <div class="container" id="home-default">
         <div class="grid third gap-x-xxl no-row-gap">
             <div>
