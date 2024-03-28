@@ -108,9 +108,10 @@ class HomeController extends Controller
 
             //return view('home.specific-page', array_merge($commonData, ['customHomepage' => $customHomepage]));
             //add books in page too
+            $commonData['view'] = 'list';//list view
             $books = $this->queries->books->visibleForListWithCover()
                 ->orderBy($commonData['listOptions']->getSort(), $commonData['listOptions']->getOrder())
-                ->paginate(18);
+                ->paginate(4);//4 books
             $data = array_merge($commonData, ['books' => $books]);
             return view('home.specific-page', array_merge($data, ['customHomepage' => $customHomepage]));
 
